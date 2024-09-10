@@ -147,7 +147,7 @@ body {
 
 .main-white-button a {
   font-size: 13px;
-  color: #fb5849;
+  color: #E21D1D;
   background-color: #fff;
   padding: 12px 25px;
   display: inline-block;
@@ -208,7 +208,7 @@ header
 */
 
 .background-header {
-  background-color: #fff;
+  background-color: white;
   height: 80px!important;
   position: fixed!important;
   top: 0px;
@@ -219,7 +219,7 @@ header
 
 .background-header .logo,
 .background-header .main-nav .nav li a {
-  color: #1e1e1e!important;
+  color: white!important;
 }
 
 .background-header .main-nav .nav li:hover a {
@@ -231,7 +231,7 @@ header
 }
 
 .header-area {
-  background-color: #fff;
+  background-color: #E21D1D;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -310,17 +310,18 @@ header
 }
 
 .header-area .main-nav .nav li a {
-  color: #2a2a2a;
+  color: white;
+  
 }
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #E21D1D!important;
+  color: white!important;
 }
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #E21D1D!important;
+  color: white!important;
   opacity: 1;
 }
 
@@ -365,7 +366,7 @@ header
 .header-area .main-nav .nav li.submenu ul li a {
   opacity: 1;
   display: block;
-  background: #f7f7f7;
+  background: white;
   color: #2a2a2a!important;
   padding-left: 20px;
   height: 40px;
@@ -422,7 +423,7 @@ header
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #1e1e1e;
+  background-color: white;
   display: block;
   position: absolute;
   width: 30px;
@@ -433,7 +434,7 @@ header
 .background-header .main-nav .menu-trigger span,
 .background-header .main-nav .menu-trigger span:before,
 .background-header .main-nav .menu-trigger span:after {
-  background-color: #1e1e1e;
+  background-color: white;
 }
 
 .header-area .main-nav .menu-trigger span:before,
@@ -442,7 +443,7 @@ header
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #1e1e1e;
+  background-color: white;
   display: block;
   position: absolute;
   width: 30px;
@@ -453,7 +454,7 @@ header
 
 .background-header .main-nav .menu-trigger span:before,
 .background-header .main-nav .menu-trigger span:after {
-  background-color: #1e1e1e;
+  background-color: white;
 }
 
 .header-area .main-nav .menu-trigger span:before,
@@ -494,11 +495,11 @@ header
   -ms-transform: translateY(6px) translateX(1px) rotate(45deg);
   -webkit-transform: translateY(6px) translateX(1px) rotate(45deg);
   transform: translateY(6px) translateX(1px) rotate(45deg);
-  background-color: #1e1e1e;
+  background-color: white;
 }
 
 .background-header .main-nav .menu-trigger.active span:before {
-  background-color: #1e1e1e;
+  background-color: white;
 }
 
 .header-area .main-nav .menu-trigger.active span:after {
@@ -506,11 +507,11 @@ header
   -ms-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   -webkit-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   transform: translateY(-6px) translateX(1px) rotate(-45deg);
-  background-color: #1e1e1e;
+  background-color: white;
 }
 
 .background-header .main-nav .menu-trigger.active span:after {
-  background-color: #1e1e1e;
+  background-color: white;
 }
 
 .header-area.header-sticky {
@@ -541,14 +542,14 @@ header
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #fb5849!important;
+    color: #E21D1D!important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
     width: 100%;
   }
   .header-area {
-    background-color: #f7f7f7;
+    background-color: #E21D1D;
     padding: 0px 15px;
     height: 100px;
     box-shadow: none;
@@ -701,6 +702,7 @@ banner
 /* ==== Main CSS === */
 .img-fill{
   width: 100%;
+  height: 600px;
   display: block;
   overflow: hidden;
   position: relative;
@@ -710,7 +712,8 @@ banner
 .img-fill img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   position: relative;
   z-index: 0; /* Imagen de fondo */
 }
@@ -748,12 +751,17 @@ banner
 /*para celulares*/
 @media (min-width: 320px) and (max-width: 950px){
   .img-fill img{
-    height: 350px;
+    height: 300px;
+  }
+  .gradient-overlay::before {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)); /* Más sutil */
   }
   .company-logo{
     display: none;
   }
 }
+
+
 /*para pcs y laptops*/
 @media (min-width: 1080px){
   .logo{
@@ -809,17 +817,17 @@ banner
   position:absolute;
   top:50%;
   transform: translateY(-25px);
-  right:30px;
+  right:15px;
   width: 50px;
   height: 50px;
-  background-color: #E21D1D;
+  background-color: transparent;
   border:0 none;
   line-height: 44px;
   border-radius: 50%;
   text-align:center;
   font-size: 36px;
   font-family: 'FontAwesome';
-  color:#FFF;
+  color:#E21D1D;
   z-index:5;
   outline: none;
   opacity: 0.3;
@@ -838,17 +846,17 @@ banner
   position:absolute;
   top:50%;
   transform: translateY(-25px);
-  left:30px;
+  left:15px;
   width: 50px;
   height: 50px;
-  background-color: #E21D1D;
+  background-color: transparent;
   border:0 none;
   line-height: 44px;
   border-radius: 50%;
   text-align:center;
   font-size: 36px;
   font-family: 'FontAwesome';
-  color:#FFF;
+  color:#E21D1D;
   z-index:5;
   outline: none;
   opacity: 0.3;
@@ -955,7 +963,7 @@ menu
 */
 
 #menu {
-  margin-top: 120px;
+  margin-top: 1px;
   background-color: #fffafa;
   padding: 120px 0px;
 }
@@ -1519,13 +1527,13 @@ offers
 footer
 --------------------------------------------- 
 */
-
 footer {
   margin-top: 60px;
   padding: 50px 0px;
-  background-color: #fb5849;
+  background-color: #E21D1D;
 }
 
+/* Texto del lado izquierdo (pantallas grandes) */
 footer .left-text-content p {
   margin-top: 5px;
   color: #fff;
@@ -1533,6 +1541,7 @@ footer .left-text-content p {
   text-align: right;
 }
 
+/* Texto del lado derecho */
 footer .right-text-content p {
   color: #fff;
   font-size: 14px;
@@ -1540,25 +1549,42 @@ footer .right-text-content p {
   text-transform: uppercase;
 }
 
-
+/* Alineación de iconos en pantallas grandes */
 footer .right-text-content {
   text-align: left;
   margin-top: 10px;
 }
 
-footer .logo {
+/* Logo en el centro */
+footer .logoFooter {
   text-align: center;
+}
+
+footer .logoFooter img {
+  max-width: 150px; /* Ajusta el tamaño máximo del logo */
+  height: auto; /* Mantiene la proporción del logo */
+  display: block;
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+/* Alineación de los íconos */
+footer .right-text-content ul {
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  margin: 0;
 }
 
 footer .right-text-content ul li {
   display: inline-block;
   margin-left: 15px;
 }
+
 footer .right-text-content ul li:first-child {
   margin-left: 0px;
 }
 
-
+/* Estilos para los íconos */
 footer .right-text-content ul li a {
   width: 44px;
   height: 44px;
@@ -1568,17 +1594,13 @@ footer .right-text-content ul li a {
   font-size: 20px;
   background-color: #fff;
   border-radius: 50%;
-  color: #fb5849;
-  -webkit-transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  color: #E21D1D;
+  transition: all 0.5s ease;
 }
 
 footer .right-text-content ul li a:hover {
   color: #2a2a2a;
 }
-
 /* 
 ---------------------------------------------
 responsive
@@ -1629,13 +1651,32 @@ responsive
   #offers .tabs-content .right-list {
     margin-left: 0px;
   }
+
   footer .right-text-content {
-    text-align: center;
-    margin-bottom: 30px;
+    text-align: center; /* Alineación central para íconos */
+    margin-top: 20px;
   }
+
   footer .left-text-content p {
+    text-align: center; /* Centrar el texto del copyright */
+  }
+
+  footer .logoFooter {
+    text-align: center; /* Asegura que el logo siempre esté centrado */
+    margin-top: 20px;
+  }
+
+  footer .logoFooter img {
+    max-width: 120px; /* Tamaño más pequeño para pantallas pequeñas */
+  }
+
+  /* Asegurar que los íconos también se centren */
+  footer .right-text-content ul {
     text-align: center;
-    margin-top: 30px;
+  }
+
+  footer .right-text-content ul li {
+    margin: 10px; /* Margen alrededor de los íconos */
   }
 }
 
@@ -1645,7 +1686,7 @@ responsive
 
 #preloader {
   overflow: hidden;
-  background-color: #fb5849;
+  background-color: #E21D1D;
   left: 0;
   right: 0;
   top: 0;
