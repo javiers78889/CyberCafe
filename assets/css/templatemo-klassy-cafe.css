@@ -98,6 +98,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0px;
 }
 
+
 ul {
   margin-bottom: 0px;
 }
@@ -1434,8 +1435,42 @@ chefs
   color: #2a2a2a;
 }
 
+/*
+-----------------
+Compras Online
+-----------------
+*/
 
-/* 
+#logosTiendas {
+  display: flex;
+  justify-content: center; /* Centra los logos horizontalmente */
+  gap: 20px; /* Espaciado entre los logos */
+  flex-wrap: wrap; /* Permite que los logos se ajusten en múltiples líneas si es necesario */
+}
+
+.logo-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logosTiendas img {
+  width: 75px; /* Tamaño base */
+  height: 75px; /* Tamaño base */
+  border-radius: 50%; 
+}
+
+@media (max-width: 600px) {
+  #logosTiendas img {
+      width: 50px; /* Tamaño más pequeño en pantallas pequeñas */
+      height: 50px; /* Tamaño más pequeño en pantallas pequeñas */
+  }
+}
+
+
+
+
+
 ---------------------------------------------
 reservation
 --------------------------------------------- 
